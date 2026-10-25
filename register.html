@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Creators Club | Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Campus Creators Club</h1>
+        <p>Learn, Create and Connect</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="events.html">Events</a>
+        <a href="register.html" class="active">Register</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Event Registration</h2>
+            <p>Fill out the form below to register for a club event.</p>
+
+            <form id="registration-form" action="#" method="post">
+
+                <fieldset>
+                    <legend>Personal Information</legend>
+
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required minlength="3" maxlength="50" placeholder="Enter your full name">
+
+                    <label for="email">University Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your university email">
+
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required pattern="03[0-9]{9}" title="Enter an 11-digit Pakistani mobile number starting with 03" placeholder="03001234567">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Event Information</legend>
+
+                    <label for="event">Select Event</label>
+                    <select id="event" name="event" required>
+                        <option value="">Choose an event</option>
+                        <option value="Creative Ideas Workshop">Creative Ideas Workshop</option>
+                        <option value="Web Development Session">Web Development Session</option>
+                        <option value="Blood Donation Camp">Blood Donation Camp</option>
+                        <option value="Student Talent Showcase">Student Talent Showcase</option>
+                    </select>
+
+                    <p>How did you hear about us?</p>
+
+                    <label>
+                        <input type="radio" name="source" value="Social Media" required>
+                        Social Media
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="University Notice Board">
+                        University Notice Board
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="Friend">
+                        Friend
+                    </label>
+
+                    <label>
+                        <input type="radio" name="source" value="Other">
+                        Other
+                    </label>
+                </fieldset>
+
+                <button type="submit">Register Now</button>
+
+                <p id="message" role="status" aria-live="polite"></p>
+
+            </form>
+        </section>
+
+        <section>
+            <h2>Saved Registrations</h2>
+            <p>Your registrations are saved in this browser.</p>
+
+            <div class="table-container">
+                <table>
+                    <caption>List of registered students</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Phone</th>
+                            <th scope="col">Event</th>
+                            <th scope="col">Heard About Us</th>
+                        </tr>
+                    </thead>
+                    <tbody id="registrations-list">
+                    </tbody>
+                </table>
+            </div>
+
+            <button type="button" id="clear-button">Clear All Registrations</button>
+        </section>
+
+        <aside>
+            <h2>Registration Reminder</h2>
+            <p>Please enter correct information and select the event you want to attend.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Campus Creators Club</p>
+        <p>Learn more about web development at
+            <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>
+        </p>
+    </footer>
+
+</body>
+</html>
